@@ -1,7 +1,19 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
+@font-face{
+    font-family: "Inter Web";
+    font-weight: 400;
+    src: url("fonts\Inter-Regular.woff2");
 
+}
+
+@font-face{
+    font-family: "Inter Web";
+    font-weight: 600;
+    src: url("fonts\Inter-SemiBold.woff2");
+
+}
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -25,12 +37,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: "Inter Web", Helvetica, arial, sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -53,7 +65,7 @@ html {
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +170,23 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #3385FF;
 }
 
 a:hover,
 a:focus {
     color: DeepPink;
+}
+
+input{
+    display: block;
+    width: 100%;
 }
 
 /*------------------------------------*\
@@ -431,7 +448,28 @@ a:focus {
     ---
     Website main logo
 */
+.c-logo{
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.c-logo__symbol{
+    height: 100%;
+}
+
+.c-logo__path--1{
+    fill: #20223A;
+}
+
+.c-logo__path--2{
+    fill: #3385FF;
+}
+
+.c-logo__path--3{
+    fill: #1B4186;
+}
 /*
     Component: Card
     ---
@@ -444,6 +482,23 @@ a:focus {
     Everything form related here
 */
 
+.c-form-field{
+    width: 100%;
+}
+
+.c-form-exeption{
+    display: inline-flex;
+    align-items: center;
+}
+
+.c-form-exeption label{
+    width: 100%;
+}
+
+.c-form-exeption input{
+    width: auto;
+}
+
 /*
     Component: Input
     ---
@@ -451,7 +506,16 @@ a:focus {
 */
 
 .c-input {
-
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 2px 0 grey;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    padding:  10px 0 10px 10px;
 }
 
 .c-input:focus {
@@ -498,6 +562,12 @@ a:focus {
 .c-button--block {
 
 }
+
+/*
+    Component: Logo
+    ---
+*/
+
 
 /*------------------------------------*\
 #UTILITIES
